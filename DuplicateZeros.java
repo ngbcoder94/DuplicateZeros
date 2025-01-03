@@ -18,11 +18,11 @@ public class DuplicateZeros{
         public void insertZero(int[] nums, int index){
                 
                 //Need to iterate through the array backwards. 
-                for(int i = (nums.length-1); i >= 0; i--){
+                for(int i = (nums.length-1); i > index; i--){
                         
-                        nums[i-1] = nums[i];    //Move everything over one to the left.
+                        nums[i] = nums[i-1];    //Move everything over one to the left.
                 }
-                nums[index+1] = 0;
+                //nums[index+1] = 0;
         }
 
         /*
@@ -39,13 +39,14 @@ public class DuplicateZeros{
                         //Need to check if I have a zero. 
                         if(nums[i] == 0){
                                 insertZero(nums, i);
+                                i += 1;
                         }
                 }
         }
 
         public static void main(String[] args){
                 
-                int[] tmpArr = {1, 1, 0, 2, 0, 3};      //Create an array to test with.
+                int[] tmpArr = {1, 0, 0, 1, 1, 1, 1, 1};      //Create an array to test with.
                 
                 DuplicateZeros tmpObj = new DuplicateZeros();   //Create a new instance of DuplicateZeros for testing.
 
