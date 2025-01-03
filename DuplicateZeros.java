@@ -16,6 +16,22 @@ public class DuplicateZeros{
          * @return void - Don't return anything.
          */
         public void insertZero(int[] nums, int index){
+                
+                //Need to iterate through the array backwards. 
+                for(int i = (nums.length-1); i >= 0; i--){
+                        
+                        nums[i-1] = nums[i];    //Move everything over one to the left.
+                }
+                nums[index+1] = 0;
+        }
+
+        /*
+         * Here is my Duplicate function that will actually run everything. 
+         *
+         * @param int[] nums - Array passe in. 
+         * @return void - Don't return anything, just alter the array passed in.
+         */
+        public void duplicate(int[] nums){
 
         }
 
