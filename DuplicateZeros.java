@@ -32,7 +32,8 @@ public class DuplicateZeros{
          * @return void - Don't return anything, just alter the array passed in.
          */
         public void duplicate(int[] nums){
-
+                
+                //Need to iterate over the original array.
         }
 
         public static void main(String[] args){}
