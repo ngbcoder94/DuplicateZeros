@@ -4,7 +4,7 @@
  * Author: Nick Burkett
  * Date: 01/01/25
  *
- * Status - WIP
+ * Status - COMPLETED
  */
 public class DuplicateZeros{
         
@@ -22,7 +22,6 @@ public class DuplicateZeros{
                         
                         nums[i] = nums[i-1];    //Move everything over one to the left.
                 }
-                //nums[index+1] = 0;
         }
 
         /*
