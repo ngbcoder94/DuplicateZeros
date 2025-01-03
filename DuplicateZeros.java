@@ -34,6 +34,13 @@ public class DuplicateZeros{
         public void duplicate(int[] nums){
                 
                 //Need to iterate over the original array.
+                for(int i = 0; i < (nums.length-1); i++){
+                        
+                        //Need to check if I have a zero. 
+                        if(nums[i] == 0){
+                                insertZero(nums, i);
+                        }
+                }
         }
 
         public static void main(String[] args){}
