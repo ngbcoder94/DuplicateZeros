@@ -34,7 +34,7 @@ public class DuplicateZeros{
         public void duplicate(int[] nums){
                 
                 //Need to iterate over the original array.
-                for(int i = 0; i < (nums.length-1); i++){
+                for(int i = 0; i < nums.length; i++){
                         
                         //Need to check if I have a zero. 
                         if(nums[i] == 0){
@@ -43,7 +43,21 @@ public class DuplicateZeros{
                 }
         }
 
-        public static void main(String[] args){}
+        public static void main(String[] args){
+                
+                int[] tmpArr = {1, 1, 0, 2, 0, 3};      //Create an array to test with.
+                
+                DuplicateZeros tmpObj = new DuplicateZeros();   //Create a new instance of DuplicateZeros for testing.
+
+                tmpObj.duplicate(tmpArr);       //Call the duplicate function on the array above.
+                
+                //Print out the new array. 
+                for(int i = 0; i < tmpArr.length; i++){
+
+                        System.out.println(tmpArr[i]);      //Print
+                }
+
+        }
 
 }
 
